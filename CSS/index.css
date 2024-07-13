@@ -1,0 +1,159 @@
+:root{
+/*Colors*/
+        /* Primary*/
+--Gradient: hsl(6, 100%, 80%) to hsl(335, 100%, 65%);
+        /*Neutral*/
+--Pale_Blue: hsl(243, 100%, 93%);
+--rayish_Blue: hsl(229, 7%, 55%);
+--Dark_Blue: hsl(228, 56%, 26%);
+--Very_Dark_Blue: hsl(229, 57%, 11%);
+
+}
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+box-sizing: border-box;
+} 
+
+body{
+    background-color: var(--Very_Dark_Blue);
+    font-family: "Raleway";
+    background-image: url("../images/bg-desktop.png");
+    background-repeat: no-repeat;
+    background-size: 100% 50%; 
+    background-position: bottom; 
+    min-height: 100vh; 
+    margin: 0;
+    
+    
+}
+.storage{
+    background-color: var(--Dark_Blue);
+    width: 30rem;
+    height: 150px;
+    position: absolute;
+    left: 65%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    padding: 20px;
+}
+
+
+.storage_used span{
+    color: var(--Pale_Blue);
+}
+.storage_used{
+    color: var(--rayish_Blue);
+    padding-left: 15px;
+}
+.min_capacity{
+    color: var(--Pale_Blue);
+    position: relative;
+    top: -25px;
+    left: 30px;
+}
+.max_capacity{
+    color: var(--Pale_Blue);
+    position: relative;
+    top: -45px;
+    left: 370px;
+}
+.space_left{
+    position: relative;
+    left: 285px;
+    background-color: var(--Pale_Blue);
+    width: 150px;
+    height: 50px;
+    top: -100px;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.space_left span{
+    padding-left: 5px;
+    font-size: 10px;
+    font-weight: 300;
+}
+.space_left::before{
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: -15px;
+    width: 0px;
+    height: 0px;
+    background-color: transparent;
+    border: 15px solid;
+    border-color: transparent var(--Pale_Blue) transparent transparent;
+
+}
+input[type="range"] {
+    appearance: none; 
+    width: 90%; 
+    height: 15px; 
+    background-image: linear-gradient(
+        to right,
+        hsl(6, 100%, 80%) ,
+        hsl(335, 100%, 65%)70%,
+        var(--Very_Dark_Blue)70%,
+        var(--Very_Dark_Blue)100%
+        );  
+    border-radius: 10px;
+    position: relative;
+    top: 20px; 
+    left: 20px;
+    border: 2px solid var(--Very_Dark_Blue);
+}
+input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 11px; 
+    height: 11px; 
+    border-radius: 50%; 
+    background-color: var(--Pale_Blue); 
+    z-index: 3; 
+    position: relative; 
+    left: 75px;
+}
+
+input[type="range"]::after {
+    content: "";
+    position: absolute;
+    right: 121px;
+    top: -2.5px;
+    width: 0px;
+    height: 0px;
+    background-color: transparent;
+    border-radius: 50%;
+    border: 8.0px solid;
+    border-color: transparent hsl(335, 100%, 65%) transparent transparent;
+    z-index: 2; 
+}
+.Fylo{
+    background-color: var(--Dark_Blue);
+    width: 20rem;
+    height: 150px;
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    border-radius: 10px;
+    border-top-right-radius: 70px;
+    padding: 20px;
+    
+}
+.folders img{
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+    background-color: var(--Very_Dark_Blue);
+    padding: 10px;
+    margin: 15px 5px;
+
+    
+ 
+
+}
